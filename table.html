@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
-
+  <!-- הכתובת שלי -->
+  <!-- https://my-server-lh4g.onrender.com -->
+  <!--  -->
 <head>
   <style>
     table {
@@ -33,8 +35,8 @@
 
 <body>
   <h1>rest api</h1>
-  <h2> https://my-first-server-38dm.onrender.com : כתובת השרת </h2>
-  <a href="https://my-first-server-38dm.onrender.com">Server Link</a>
+  <h2> https://my-server-lh4g.onrender.com : כתובת השרת </h2>
+  <a href="https://my-server-lh4g.onrender.com">Server Link</a>
 
   <h2> הבאים resources -השרת מכיל את ה</h2>
   <h3>product resource</h3>
@@ -58,7 +60,7 @@
       <tr>
 
         <td>Get</td>
-        <td>products</td>
+        <td>/products</td>
         <td>---</td>
         <td>---</td>
         <td>products[{_id,name,category, company ,price,size,color,userAdded,imgUrl}]</td>
@@ -72,7 +74,7 @@
       <tr>
 
         <td>get</td>
-        <td>products/:id</td>
+        <td>/products/:id</td>
         <td>---</td>
         <td>id- קוד מוצר </td>
         <td>מחזיר פרטי מוצר של הקוד שהתקבל</td>
@@ -85,7 +87,7 @@
       <tr>
 
         <td>post</td>
-        <td>products/</td>
+        <td>/products</td>
         <td>{ name, size, color, company, category, price, imgUrl }</td>
         <td>---</td>
         <td>המשתמש החדש עם כל הפרטים שהוכנסו ב-body +_id,dateAdded,userAdded</td>
@@ -98,7 +100,7 @@
       <tr>
 
         <td>Delete</td>
-        <td>product/:id</td>
+        <td>/product/:id</td>
         <td>---</td>
         <td>id קוד מוצר-</td>
         <td>פרטי המוצר שנמחק</td>
@@ -112,7 +114,7 @@
       <tr>
 
         <td>put</td>
-        <td>products/:id</td>
+        <td>/products/:id</td>
         <td>{ name, size, color, company, category, price, imgUrl }/td>
         <td>id קוד מוצר-</td>
         <td>פרטי המוצר שהתעדכן</td>
@@ -148,7 +150,7 @@
       <tr>
 
         <td>Get</td>
-        <td>users</td>
+        <td>/users</td>
         <td>---</td>
         <td>---</td>
         <td>מערך של אובייקטים של משתמשים</td>
@@ -162,7 +164,7 @@
       <tr>
 
         <td>get</td>
-        <td>users/:id</td>
+        <td>/users/:id</td>
         <td>---</td>
         <td>id- קוד מוצר </td>
         <td>מחזיר פרטי משתמש לפי הקוד שהתקבל</td>
@@ -174,7 +176,7 @@
       </tr>
       <tr>
         <td>post</td>
-        <td>users</td>
+        <td>/users</td>
         <td>name,password,email,address{city,street,houseNumber}</td>
         <td>---</td>
         <td>המשתמש החדש עם כל הפרטים שהוכנסו ב-body + _id,token</td>
@@ -187,7 +189,7 @@
 
       <tr>
         <td>post</td>
-        <td>users/login</td>
+        <td>/users/login</td>
         <td>{email, password}חובה-</td>
         <td>---</td>
         <td>המשתמש שנרשם עם כל הפרטים שלו+ _id, token</td>
@@ -225,7 +227,6 @@
       <td>/orders</td>
       <td>---</td>
       <td>---</td>
- 
       <td>orders[{ orderDate, dueDate, costumerId,address: {
         street,city,houseNumber}
         ,arrProduct[{name,company,price,imgUrl,quantity}],orderCameOut}]</td>
@@ -291,7 +292,7 @@
       <tr>
 
         <td>put</td>
-        <td>orders/:id</td>
+        <td>/orders/:id</td>
         <td>---</td>
         <td>id</td>
         <td>order{...orderCameOut:true}</td>

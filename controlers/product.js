@@ -113,12 +113,3 @@ export const addProduct = async (req, res) => {
         res.status(400).send("שגיאה בהוספה אין אפשרות להוסיף מוצר זה" + err)
     }
 }
-// {
-//     "name":"כוס",
-//     "category":"table",
-//     "company":"la napkin",
-//     "price":"50",
-//     "size":"4.5",
-//     "color": "Clear"
-     
-//   }
