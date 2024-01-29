@@ -15,10 +15,10 @@ export const getAllOrders = async (req, res) => {
 //הזמנת מוצר
 export const addOrder = async (req, res) => {
 
-    let { dueDate, address: { city, street, houseNumber }, arrProduct = [], orderCameOut } = req.body;
+    let { dueDate, address: { city, street, houseNumber }, arrProduct = [],orderCameOut } = req.body;
 
     // let userId = req.myuser._id;
-
+    
     let validate = orderValidator(req.body);
     if (validate.error)
         return res.status(400).send(validate.error.message)

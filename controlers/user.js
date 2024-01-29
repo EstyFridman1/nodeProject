@@ -24,9 +24,9 @@ export const addUser = async (req, res) => {
         let token = generateToken(newUser)//יצירת טוקן
 
         //הוספת הפרמטרים שלא ניתנים להכנסה
-        let { _id, role } = newUser;
+        let { _id} = newUser;
         //החזרת המשתמש החדש כולל הטוקן
-        return res.json({ _id, name,password, email, city, street, houseNumber, role, token })
+        return res.json({ _id, name,password, email, city, street, houseNumber,  token })
 
     }
     catch (err) {
@@ -52,10 +52,10 @@ export const login = async (req, res) => {
 
         if (!await bcrypt.compare(password, loggedInUser.password))
             return res.status(404).send("לא נמצא משתמש עם סיסמה כזו")
-        let { _id, name, role } = loggedInUser;
+        let { _id, name } = loggedInUser;
         let token = generateToken(loggedInUser);
         //localStorage.setItem("token", JSON.stringify(token))//שמירה
-        res.json({ _id, name, email, role, token });
+        res.json({ _id, name, email,  token });
 
     }
     catch (err) {
